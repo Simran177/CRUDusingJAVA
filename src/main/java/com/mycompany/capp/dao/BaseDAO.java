@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
  * @author Simran
  */
 // Do not use @Repositiry or @Service or @Component annotation
-abstract class BaseDAO extends NamedParameterJdbcDaoSupport{
+abstract public class BaseDAO extends NamedParameterJdbcDaoSupport{
     @Autowired
     
     public void setDataSource2(DataSource ds)

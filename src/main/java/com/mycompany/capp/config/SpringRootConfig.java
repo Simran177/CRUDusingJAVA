@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 //Spring will identify DAOs from this location
-@ComponentScan(basePackages={"com.mycompany.capp.dao"})
+@ComponentScan(basePackages={"com.mycompany.capp.dao","com.mycompany.capp.service"})
 public class SpringRootConfig {
     // TODO : Services, DAO, DataSource, Email Sender or some other business
    @Bean
