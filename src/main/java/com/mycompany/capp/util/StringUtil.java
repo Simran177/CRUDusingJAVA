@@ -16,7 +16,7 @@ public class StringUtil {
             sb.append(item).append(",");
         }
         if(sb.length()>0){
-            sb.deleteCharAt(sb.length()-1);
+            sb.deleteCharAt(sb.length()-1);    //to remove comma from the last
         }
         return sb.toString();
     }

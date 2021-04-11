@@ -44,7 +44,7 @@ public interface UserService {
     public List<User> getUserList();
     
     /**
-     * This method change the user login status fro details passed as argument.
+     * This method change the user login status for details passed as argument.
      * @param userId
      * @param loginStatus 
      */
