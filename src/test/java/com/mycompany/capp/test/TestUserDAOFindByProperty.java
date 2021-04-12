@@ -19,7 +19,7 @@ public class TestUserDAOFindByProperty {
         UserDAO userDAO = ctx.getBean(UserDAO.class);
         
         //List<User> users = userDAO.findByProperty("userId",1);
-        List<User> users = userDAO.findByProperty("name","Simran");
+        List<User> users = userDAO.findByProperty("role","1");
 
         for(User u : users){
             System.out.println(u.getUserId() + " " +u.getName()+ " " + u.getEmail());

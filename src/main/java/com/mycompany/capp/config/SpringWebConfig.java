@@ -20,10 +20,10 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 public class SpringWebConfig extends WebMvcConfigurerAdapter{
     
-    //handle static resource
+    //handle static resource like css,images,js
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry){
-        
+        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
     }
     @Bean
     public ViewResolver viewResolver(){
