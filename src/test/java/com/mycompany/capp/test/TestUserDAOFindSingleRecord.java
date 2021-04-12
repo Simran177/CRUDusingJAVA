@@ -16,7 +16,7 @@ public class TestUserDAOFindSingleRecord {
        
         ApplicationContext ctx= new AnnotationConfigApplicationContext(SpringRootConfig.class);
         UserDAO userDAO = ctx.getBean(UserDAO.class);
-        User u = userDAO.findById(1);
+        User u = userDAO.findById(3);
         System.out.println("====Data Detail====");
         System.out.println(u.getUserId());
         System.out.println(u.getName());

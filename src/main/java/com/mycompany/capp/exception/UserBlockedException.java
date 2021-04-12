@@ -17,7 +17,7 @@ public class UserBlockedException extends Exception{
     }
     
     /**
-     * Creates User object with error description
+     * Creates User object with error description that will be supplied to parent class
      */
     public UserBlockedException(String errDesc){
         super(errDesc);
