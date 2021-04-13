@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
+    Document   : contact_form
     Created on : 11 Apr, 2021, 3:54:35 PM
-    Author     : Simran
+    Author     : Unnati
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Login - Contact Application</title>
+        <title>Contact Form - Contact Application</title>
         <s:url var="url_css" value="/static/css/style.css" />
         <link href="${url_css}" rel="stylesheet" type="text/css" />
     </head>
@@ -37,32 +37,46 @@
                 <tr>
                 <td height="350px">
                     <%-- Page Content Area --%>
-                    <h1>User Login</h1>
-                     <c:if test="${err!=null}">
+                    <h1>Contact Form</h1>
+                    <c:if test="${err!=null}">
                     <p class="error">${err}</p>
                     </c:if>
+                    
                     <c:if test="${param.act eq 'lo'}">
                     <p class="success">Logout Successfully! Thanks for using contact application</p>
                     </c:if>
-                    <c:if test="${param.act eq 'reg'}">
-                    <p class="success">User Registered Successfully, Please Login!</p>
-                    </c:if>
-                    <s:url var="url_login" value="/login" />
-                    <f:form action="${url_login}" modelAttribute="command">
+                    <s:url var="url_csave" value="/user/save_contact" />
+                    <f:form action="${url_csave}" modelAttribute="command">
                         <table border="1">
                             <tr>
-                                <td>Username</td>
-                                <td><f:input path="loginName" /> </td>
+                                <td>Name</td>
+                                <td><f:input path="name" /> </td>
                             </tr>
+                            
                             <tr>
-                                <td>Password</td>
-                                <td><f:password path="password" /> </td>
+                                <td>Phone</td>
+                                <td><f:input path="phone" /> </td>
                             </tr>
+                            
+                            <tr>
+                                <td>Email</td>
+                                <td><f:input path="email" /> </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Address</td>
+                                <td><f:textarea path="address" /> </td>
+                            </tr>
+                            
+                             <tr>
+                                <td>Remark</td>
+                                <td><f:textarea path="remark" /> </td>
+                            </tr>
+                            
+                           
                             <tr> 
                                 <td colspan="2" align="right">
-                                    <button>Login</button>
-                                    <br>
-                                    <a href="#">New User Registration</a>
+                                    <button>Save</button>
                                 </td>
                             </tr>
                         </table>
