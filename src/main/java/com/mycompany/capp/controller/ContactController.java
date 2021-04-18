@@ -78,9 +78,23 @@ public class ContactController {
 
     }
     
+    @RequestMapping(value = "/user/contact_search")
+    public String contactSearch(Model m, HttpSession session, @RequestParam("freeText") String freeText) {
+        Integer userId = (Integer) session.getAttribute("userId");
+        m.addAttribute("contactList", contactService.findUserContact(userId, freeText));
+        return "clist"; //JSP
+
+    }
+    
     @RequestMapping(value = "/user/del_contact")
     public String deleteContact(@RequestParam("cid") Integer contactId) {
         contactService.delete(contactId);
+        return "redirect:clist?act=del";
+    }
+    
+    @RequestMapping(value = "/user/bulk_cdelete")
+    public String deleteBulkContact(@RequestParam("cid") Integer[] contactIds) {
+        contactService.delete(contactIds);
         return "redirect:clist?act=del";
     }
 }
