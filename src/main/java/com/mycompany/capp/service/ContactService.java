@@ -17,6 +17,7 @@ public interface ContactService {
     public void update(Contact c);
     public void delete(Integer contactId); //single contact delete
     public void delete(Integer[] contactIds); //multiple contact delete
+    public Contact findById(Integer cotactId);
     /**
      * This method returns all user contact (user who is logged in).
      * @param userId
