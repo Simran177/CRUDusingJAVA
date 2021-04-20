@@ -4,21 +4,148 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 11 Apr, 2021, 4:18:42 PM
-    Author     : Simran
+    Created on : May 1, 2017, 6:59:39 PM
+    Author     : Vikram
 */
 body{
-    font-family:Arial,Helvetica,Geneva,sans-serif;
-    font-size: 18px;
-    color:#FF0000;
-    background-image: url('../images/phone.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 100vh;
+    font-family: Arial, Helvetica, Geneva, sans-serif;
+    font-size: 18px;   
+    background-image: linear-gradient(#16222A,#3A6073);
+    background: conic-gradient(#16222A, #3A6073);
+    
 }
 .error{
-    color:#FF0000;
+    color: red;
+    text-align: center;
+    font-size: large;
 }
 .success{
-    color: #0000FF;
+    color: lightgreen;
+    text-align: center;
+    font-size: large;
 }
+table{
+    border: 0px;
+
+}
+.tableheader{
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px #000 ;
+}
+.tablemenu{
+    text-align: center;
+    color: beige;
+    margin-bottom: 100px;
+}
+.link{
+    color: beige;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.link:hover{
+    background-color: beige;
+    opacity: 0.5;
+    color: #16222A;
+    transition: 0.65s;
+    box-shadow: 2px 2px 3px #000;
+    
+}
+.link:active{
+    opacity: 0.7;
+}
+h2{
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px #000 ;
+ 
+}
+.formtable tr td{
+    color: whitesmoke;
+    font-size: 15px;
+    padding: 4px 8px;
+   
+}
+input{
+    width: 180px;
+}
+.formtable tr td button{
+    background-color: #FF7F50;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+.formtable tr td button:hover{
+    opacity: 0.87;
+    color: white;
+}
+.reg_link{
+    color: beige;
+    text-decoration: none;
+    padding: 17px 0px;
+}
+.footer{
+    font-size: x-large;
+    text-align: center;
+    position:fixed;
+    bottom: 0px;
+    color: beige;
+    font-size: small;
+    margin-left: 400px;
+}
+td input{
+    opacity: 0.85;
+}
+td input:hover{
+    opacity: 0.69;
+}
+.formtable h1{
+    color: whitesmoke;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 150px;
+}
+.formtable p{
+    color: black;
+    font-size: large;
+    text-align: center;
+    font-weight: 100;
+}
+/* applied on both users.jsp file & clist.jsp file*/
+.usertable th,td{
+    padding: 10px;
+    text-align: left;
+}
+.usertable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  border-radius:2px;
+}
+.usertable tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
+.usertable th{
+    color: #16222A;
+}
+.usertable tbody tr:hover{
+    opacity: 0.67;
+    transition: 0.65s;
+}
+/* applied on both users.jsp file & clist.jsp file*/
+
+/* clist.jsp form css*/
+.formtable .clistform div{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+

@@ -4,19 +4,19 @@
     Author     : Unnati Goyal
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%--to add a url we use taglib --%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User List- Contact Application</title>
-        <s:url var="url_css" value="/static/css/style.css" />
-        <link href="${url_css}" rel="stylesheet" type="text/css" />
-        <s:url var="url_jqlib" value="/static/js/jquery-3.2.1.min.js" />
+        <title>User List - Contact Application </title>
+        <s:url var="url_css" value="/static/css/style.css"/>
+        <link href="${url_css}" rel="stylesheet" type="text/css"/> 
+        <s:url var="url_jqlib" value="/static/js/jquery-3.5.1.js" />
         <script src="${url_jqlib}"></script>
-         <script>
+        <script>
             function changeStatus(uid, lstatus){
                 //alert(userId+", "+loginStatus);
                 $.ajax({
@@ -29,28 +29,26 @@
             }
         </script>
     </head>
-    <%--<s:url var="url_bg" value="/static/images/bg-1.jpg"/>--%>
-    <!--<body background="${url_bg}">-->
-    <body>
-        <table border="1" width="80%" align="center">
+    <s:url var="url_bg" value="/static/images/bg.jpg"/>
+    <body background="${url_bg}">
+        <table class="tablecss" width="80%" align="center">
             <tr>
-                <td height="80px">
+                <td height="80px" class="tableheader">
                     <%-- Header --%>
-                    <!--<h1>Contact Application</h1>-->
-                    <jsp:include page="include/header.jsp" />
+                    <jsp:include page="include/header.jsp"/>
                 </td>
-                </tr>
-                <tr>
-                <td height="25px">
+            </tr>
+            <tr>
+                <td height="25px" class="tablemenu">
                     <%-- Menu --%>
-                    <jsp:include page="include/menu.jsp" />
+                    <jsp:include page="include/menu.jsp"/>
                 </td>
-                </tr>
-                <tr>
-                <td height="350px" valign="top">
-                    <%-- Page Content Area --%>
-                    <h3>User List</h3>
-                    <table border="1">
+            </tr>
+            <tr>
+                <td height="350px" valign="top" >
+                    <%-- Page Content Area--%>
+                    <h2>User List</h2>
+                    <table class="usertable">
                         <tr>
                             <th>SR</th>
                             <th>USER ID</th>
@@ -83,12 +81,13 @@
                             </tr>
                         </c:forEach>
                     </table>
+
                 </td>
-                </tr>
-                <tr>
-                <td height="25px">
+            </tr>
+            <tr>
+                <td height="25px" class="footer">
                     <%-- Footer --%>
-                     <jsp:include page="include/footer.jsp" />
+                    <jsp:include page="include/footer.jsp"/>
                 </td>
             </tr>
         </table>
