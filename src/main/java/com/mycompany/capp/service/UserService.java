@@ -50,4 +50,11 @@ public interface UserService {
      */
     public void changeLoginStatus(Integer userId, Integer loginStatus);
     
+    /**
+     * Check the username availability
+     * @param username
+     * @return 
+     */
+    public Boolean isUsernameExists(String username);
+
 }
