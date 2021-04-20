@@ -7,7 +7,8 @@
     <%-- User is not yet logged in : Guest Menu --%>
     <s:url var="url_reg_form" value="/reg_form"/>
     <s:url var="url_index" value="/index"/>
-    <a class="link" href="${url_index}">Home</a>  <a class="link" href="${url_index}">Login</a>  <a class="link" href="${url_reg_form}">Register</a>  <a class="link" href="#">About</a>  <a class="link" href="#">Help</a>   
+    <s:url var="url_about" value="/about"/>
+    <a class="link" href="${url_index}">Home</a>  <a class="link" href="${url_index}">Login</a>  <a class="link" href="${url_reg_form}">Register</a>  <a class="link" href="${url_about}">About</a> 
 </c:if>
 <c:if test="${sessionScope.userId!=null && sessionScope.role == 1}">
     <%-- Admin is logged in : Admin Menu --%>    

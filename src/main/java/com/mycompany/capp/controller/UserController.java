@@ -83,6 +83,11 @@ public class UserController {
         return "dashboard_user";  //JSP - WEB-INF/view/index.jsp
     }
     
+    @RequestMapping(value = "/about")
+    public String about() {
+        return "about"; //JSP
+    }
+    
     @RequestMapping(value="/admin/dashboard")
     public String adminDashboard(){
         return "dashboard_admin";  //JSP - WEB-INF/view/index.jsp
